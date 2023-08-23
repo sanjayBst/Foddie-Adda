@@ -1,24 +1,51 @@
-import React from 'react'
-import classes from './MealItemForm.module.css'
-import Input from '../../UI/Input'
+import React, { useRef, useState } from "react";
+import classes from "./MealItemForm.module.css";
+import Input from "../../UI/Input";
 
 const MealItemForm = (props) => {
-  return (
-    <form className={classes.form}>
-        <Input
-        label='Quantity'
-        input={{
-            id:'quantity' + props.id,
-            type:'number',
-            min:'1',
-            max:'5',
-            step:'1',
-            defaultValue:'1'
-        }}
-        />
-        <button>+ Add</button>
-    </form>
-  )
-}
+  const [quantityIsValid, setQuantityIsValid] = useState(true);
 
-export default MealItemForm
+  const quantityInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    
+  // console.log(quantityInputRef)
+  const enteredQuantity = quantityInputRef.current.value;
+  const enteredQuantityNumber = +enteredQuantity;
+  // console.log(enteredQuantityNumber);
+
+  if (
+    enteredQuantity.trim().length === 0 ||
+    enteredQuantityNumber < 1 ||
+    enteredQuantityNumber > 5
+  ) {
+    setQuantityIsValid(false);
+    return;
+  }
+
+  props.onAddToCart(enteredQuantityNumber);
+  
+  };
+
+  return (
+    <form className={classes.form} onSubmit={submitHandler}>
+      <Input
+        ref={quantityInputRef}
+        label="Quantity"
+        input={{
+          id: "quantity_" + props.id,
+          type: "number",
+          min: "1",
+          max: "5",
+          step: "1",
+          defaultValue: "1",
+        }}
+      />
+      <button> + Add</button>
+      {!quantityIsValid && <p>Please enter a valid quantity (1-5)</p>}
+    </form>
+  );
+};
+
+export default MealItemForm;
