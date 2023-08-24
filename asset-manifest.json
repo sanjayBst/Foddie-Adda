@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/FoodieAdda/static/css/main.f27ff5a1.css",
+    "main.js": "/FoodieAdda/static/js/main.67327356.js",
+    "static/media/meal.jpg": "/FoodieAdda/static/media/meal.232d8caea3cca64e55ba.jpg",
+    "index.html": "/FoodieAdda/index.html",
+    "main.f27ff5a1.css.map": "/FoodieAdda/static/css/main.f27ff5a1.css.map",
+    "main.67327356.js.map": "/FoodieAdda/static/js/main.67327356.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f27ff5a1.css",
+    "static/js/main.67327356.js"
+  ]
+}
