@@ -4,6 +4,7 @@ import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 
+console.log("👋 Hey Developer, glad to see you here 😊");
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 

@@ -9,23 +9,22 @@ const MealItemForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    
-  // console.log(quantityInputRef)
-  const enteredQuantity = quantityInputRef.current.value;
-  const enteredQuantityNumber = +enteredQuantity;
-  // console.log(enteredQuantityNumber);
 
-  if (
-    enteredQuantity.trim().length === 0 ||
-    enteredQuantityNumber < 1 ||
-    enteredQuantityNumber > 5
-  ) {
-    setQuantityIsValid(false);
-    return;
-  }
+    // console.log(quantityInputRef)
+    const enteredQuantity = quantityInputRef.current.value;
+    const enteredQuantityNumber = +enteredQuantity;
+    // console.log(enteredQuantityNumber);
 
-  props.onAddToCart(enteredQuantityNumber);
-  
+    if (
+      enteredQuantity.trim().length === 0 ||
+      enteredQuantityNumber < 1 ||
+      enteredQuantityNumber > 5
+    ) {
+      setQuantityIsValid(false);
+      return;
+    }
+
+    props.onAddToCart(enteredQuantityNumber);
   };
 
   return (
