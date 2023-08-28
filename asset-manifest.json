@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Foodie-Adda/static/css/main.f27ff5a1.css",
-    "main.js": "/Foodie-Adda/static/js/main.21a0f4c7.js",
+    "main.css": "/Foodie-Adda/static/css/main.b834e607.css",
+    "main.js": "/Foodie-Adda/static/js/main.d16a6a12.js",
     "static/media/meal.jpg": "/Foodie-Adda/static/media/meal.232d8caea3cca64e55ba.jpg",
     "index.html": "/Foodie-Adda/index.html",
-    "main.f27ff5a1.css.map": "/Foodie-Adda/static/css/main.f27ff5a1.css.map",
-    "main.21a0f4c7.js.map": "/Foodie-Adda/static/js/main.21a0f4c7.js.map"
+    "main.b834e607.css.map": "/Foodie-Adda/static/css/main.b834e607.css.map",
+    "main.d16a6a12.js.map": "/Foodie-Adda/static/js/main.d16a6a12.js.map"
   },
   "entrypoints": [
-    "static/css/main.f27ff5a1.css",
-    "static/js/main.21a0f4c7.js"
+    "static/css/main.b834e607.css",
+    "static/js/main.d16a6a12.js"
   ]
 }
